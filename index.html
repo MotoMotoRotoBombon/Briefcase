@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/normalize.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+
+    <title>Mi portafolio</title>
+</head>
+<body>
+    <header>
+        <nav>
+            <div id="Navbar-container">
+                <ul>
+                    <li><a href="#Home">Home</a></li>
+                    <li><a href="#AboutMeSkills">About Me</a></li>
+                    <li><a href="#Projects">Proyects</a></li>
+                    <li><a href="#Contact   ">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <main>
+        <section id="Home">
+            <div>
+                <div id="data-container">   
+                    <h2>I A'M <strong class="name">JORGE</strong> EDUARDO</h2>
+                    <p>I'm a web developer junior.</p>
+                    <p>I believe in dreaming big, but also in bravely walking the path that those dreams demand.</p>  
+                    <!-- Botón para descargar el CV -->
+                    <a id="download-cv-button" href="/cv/Jorge_Eduardo_Gonzalez_CV.pdf" download>Download CV</a>
+                </div>
+            </div>
+        </section>
+        
+    
+        <section id="AboutMeSkills">
+            <div id="about-me" class="about-me-container">
+                <h2>About Me</h2>
+                <div class="about-me-content">
+                    <p>
+                        I am <strong>Jorge</strong> <strong>Eduardo</strong>, a web development student, with a strong commitment to crafting visually appealing and functional user experiences.
+                    </p>
+                    <p>
+                        I enjoy working on the <strong>backend</strong> and <strong>frontend</strong>. I find unparalleled energy and motivation in the frontend. 
+                        I thrive on challenges, embrace the opportunity to learn from mistakes, and continuously strive to enhance my skills and deliver exceptional results.
+                    </p>
+                </div>
+            </div>
+            <div class="div-skill-container">
+                <h2>Skills</h2>
+                <div class="carousel">
+                    <button class="carousel-btn prev-btn">&lt;</button>
+                    <div class="carousel-track-container">
+                        <ul class="carousel-track">
+                            <li class="carousel-item">
+                                <h5>JavaScript</h5>
+                                <img src="img/javascript-logo-javascript-icon-transparent-free-png.webp" alt="JavaScript Logo">
+                            </li>
+                            <li class="carousel-item">
+                                <h5>Java</h5>
+                                <img src="img/java Background Removed.png" alt="Java Logo">
+                            </li>
+                            <li class="carousel-item">
+                                <h5>HTML</h5>
+                                <img src="img/HTML5_logo_and_wordmark Background Removed.png" alt="HTML Logo">
+                            </li>
+                            <li class="carousel-item">
+                                <h5>CSS</h5>
+                                <img src="img/png-transparent-css-logo Background Removed.png" alt="CSS Logo">
+                            </li>
+                            <li class="carousel-item">
+                                <h5>MongoDB</h5>
+                                <img src="img/png-transparent-mongodb-original-wordmark-logo-icon-thumbnail Background Removed.png" alt="MongoDB Logo">
+                            </li>
+                            <li class="carousel-item">
+                                <h5>React</h5>
+                                <img src="img/React Background Removed.png" alt="React Logo">
+                            </li>
+                            <li class="carousel-item">
+                                <h5>NodeJS</h5>
+                                <img src="img/71302-express.js-chrome-javascript-system-node Background Removed.js-v8-runtime_1687631713.png" alt="NodeJS Logo">
+                            </li>
+                            <li class="carousel-item">
+                                <h5>MySQL</h5>
+                                <img src="img/MySQL.jpg" alt="NodeJS Logo">
+                            </li>
+                        </ul>
+                    </div>
+                    <button class="carousel-btn next-btn">&gt;</button>
+                </div>
+            </div>
+        </section>           
+        
+    
+        <section id="Projects">
+            <div>
+                <h2>Projects</h2>
+        
+                <div class="warning-icon">
+                    <i class="fas fa-exclamation-triangle"></i>
+                    <span class="tooltip-text">Those projects were developed in courses.</span>
+                </div>
+        
+                <div class="projects-container">
+                    <!-- Proyecto 1 -->
+                    <div class="project-card">
+                        <a href="https://freelancer-proyect-curse.netlify.app" target="_blank">
+                            <h3>Project 1</h3>
+                            <img src="/img/ServiciosStore.png" alt="Project 2 Screenshot">
+                            <p>A basic HTML and CSS website designed for a freelance developer.</p>
+                        </a>
+                    </div>
+                    <!-- Proyecto 2 -->
+                    <div class="project-card">
+                        <a href="https://coffe-store-tips-and-courses.netlify.app" target="_blank">
+                            <h3>Project 2</h3>
+                            <img src="/img/blog_cafe.png" alt="Project 2 Screenshot">
+                            <p>A responsive blog dedicated to coffee enthusiasts. Explore courses and workshops to learn about coffee techniques, origins, and culture.</p>
+                        </a>
+                    </div>
+                    <!-- Proyecto 3 -->
+                    <div class="project-card">
+                        <a href="https://shirts-store-responsive.netlify.app" target="_blank">
+                            <h3>Project 3</h3>
+                            <img src="/img/frontedStore.png" alt="Project 2 Screenshot">
+                            <p>A responsive Ecommerce website featuring products like t-shirts related to popular technologies, with a clean and attractive design.</p>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+        
+        
+        
+    
+        <section id="Contact">
+            <div class="contact-container">
+                <h2>Contact Me</h2>
+                <form id="contactForm" action="https://formspree.io/f/xnnqkbnr" method="POST">
+                    <label>
+                        Your email:
+                        <input type="email" name="email" placeholder="Enter your email" required>
+                    </label>
+                    <label>
+                        Your message:
+                        <textarea name="message" placeholder="Write your message here..." required></textarea>
+                    </label>
+                    <button type="submit">Send</button>
+                </form>
+            </div>
+        </section>
+        
+        
+        
+    </main>
+
+    <footer>
+        <div class="footer-container">
+            <div class="footer-section">
+                <h3>About</h3>
+                <p>Hello! I'm an aspiring web developer currently building my skills through various projects. 
+                    This portfolio showcases some of the work I've done so far. 
+                    I’ve also developed APIs for several projects, but I encountered challenges when deploying them due to the use of two separate servers—one for the frontend and another for the backend, which manages all the data.
+                </p>
+            </div>
+            <div class="footer-section">
+                <h3>Contact</h3>
+                <ul>
+                    <li><a>joedgonzalezco@ittepic.edu.mx</a></li>
+                    <li><a>+523271049974</a></li>
+                </ul>
+            </div>
+            <div class="footer-section">
+                <h3>Follow Me</h3>
+                <ul class="social-links">
+                    <li><a href="https://www.linkedin.com/in/jorge-eduardo-gonzalez-cortes-7722b92a6/" target="_blank">LinkedIn</a></li>
+                    <li><a href="https://github.com/MotoMotoRotoBombon/ProyectoMultiPlataformas" target="_blank">GitHub</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2024 Jorge Eduardo Gonzalez Cortes. All rights reserved.</p>
+        </div>
+    </footer>
+
+    
+    <script src="carousel.js"></script>
+    <script>
+        document.getElementById('contactForm').addEventListener('submit', function(event) {
+            // Usar un temporizador para limpiar el formulario después de enviar
+            setTimeout(() => {
+                this.reset();
+            }, 50); // Esperar un momento para que el formulario se envíe
+        });
+    </script>
+    
+</body>
+</html>
