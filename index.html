@@ -4,7 +4,10 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="/normalize.css">
+    <meta name="description" content="Portfolio of Jorge Eduardo, junior web developer.">
+    <meta name="keywords" content="web developer, portfolio, projects, contact, home">
+    <meta name="author" content="Jorge Eduardo Gonzalez Gonzalez Cortes">
+    <link rel="stylesheet" href="/Briefcase/normalize.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
@@ -17,88 +20,116 @@
             <div id="Navbar-container">
                 <ul>
                     <li><a href="#Home">Home</a></li>
-                    <li><a href="#AboutMeSkills">About Me</a></li>
+                    <li><a href="#AboutMe">About Me</a></li>
+                    <li><a href="#Skills">Skills</a></li>
                     <li><a href="#Projects">Proyects</a></li>
-                    <li><a href="#Contact   ">Contact</a></li>
+                    <li><a href="#Contact">Contact</a></li>
                 </ul>
             </div>
         </nav>
     </header>
 
     <main>
-        <section id="Home">
+        <section id="Home" aria-labelledby="home-heading">
             <div>
-                <div id="data-container">   
-                    <h2>I A'M <strong class="name">JORGE</strong> EDUARDO</h2>
-                    <p>I'm a web developer junior.</p>
+                <div id="data-container">  
+                    <img class="logo" src="/Briefcase/img/Jorge.jpeg" alt=""> 
+                    <h1>I AM <strong class="name">JORGE</strong> EDUARDO</h1>
+                    <p>I'm a web developer junior (JavaScript | Java | HTML | CSS | React | Express | MongoDB | Mysql | NodeJS)</p>
                     <p>I believe in dreaming big, but also in bravely walking the path that those dreams demand.</p>  
-                    <!-- Botón para descargar el CV -->
-                    <a id="download-cv-button" href="/cv/Jorge_Eduardo_Gonzalez_CV.pdf" download>Download CV</a>
+                    <!-- Botton to download CV -->
+                    <a class="cv-button" href="/Briefcase/cv/Jorge_Eduardo_Gonzalez_CV.pdf" download>Download CV</a>
+                    <!-- Preview CV-->
+                    <a class="cv-preview cv-button" id="cv-view" href="#">View CV</a>
+                </div>
+
+                <div id="cv-modal" class="modal">
+                    <div class="modal-content">
+                        <span class="close">&times;</span>
+                        <iframe id="cv-frame" src="" width="100%" height="500px"></iframe>
+                    </div>
                 </div>
             </div>
         </section>
-        
-    
-        <section id="AboutMeSkills">
-            <div id="about-me" class="about-me-container">
-                <h2>About Me</h2>
-                <div class="about-me-content">
-                    <p>
-                        I am <strong>Jorge</strong> <strong>Eduardo</strong>, a web development student, with a strong commitment to crafting visually appealing and functional user experiences.
-                    </p>
-                    <p>
-                        I enjoy working on the <strong>backend</strong> and <strong>frontend</strong>. I find unparalleled energy and motivation in the frontend. 
-                        I thrive on challenges, embrace the opportunity to learn from mistakes, and continuously strive to enhance my skills and deliver exceptional results.
-                    </p>
+
+        <section id="AboutMe" aria-labelledby="aboutMe-heading">
+            <div class="aboutMe-container">
+                <img class="aboutme-img" src="/Briefcase/img/Jorge.jpeg" alt=""> 
+                <div class="aboutme-info">
+                    <h1>About me</h1>          
+                    <p>Hi there! I'm a <span class="highlight"> Web Developer</span> student with a keen interest in backend and frontend dev</p>
+                    <p>Throughout my experience i have developed working web applications, created <span class="highlight">RESTful APIs</span>, used <span class="highlight">MongoDB</span> and <span class="highlight">MySQL</span> wich are where i've worked the most</p>
+                    <p>I like to code in JavaScript, I also had experience in <span class="highlight"> Java, NodeJS, Reac, Express</span> and agil methodologies</p>
+                    <p>I am currently finishing my last semester of Computer System Engineering at <span class="highlight"> Instituto Tecnológico de Tepic</span>. I'm excited to apply my knowledge in a professional environment and continue learning about the world of progamming every day</p>
                 </div>
             </div>
-            <div class="div-skill-container">
-                <h2>Skills</h2>
-                <div class="carousel">
-                    <button class="carousel-btn prev-btn">&lt;</button>
-                    <div class="carousel-track-container">
-                        <ul class="carousel-track">
-                            <li class="carousel-item">
-                                <h5>JavaScript</h5>
-                                <img src="img/javascript-logo-javascript-icon-transparent-free-png.webp" alt="JavaScript Logo">
-                            </li>
-                            <li class="carousel-item">
-                                <h5>Java</h5>
-                                <img src="img/java Background Removed.png" alt="Java Logo">
-                            </li>
-                            <li class="carousel-item">
-                                <h5>HTML</h5>
-                                <img src="img/HTML5_logo_and_wordmark Background Removed.png" alt="HTML Logo">
-                            </li>
-                            <li class="carousel-item">
-                                <h5>CSS</h5>
-                                <img src="img/png-transparent-css-logo Background Removed.png" alt="CSS Logo">
-                            </li>
-                            <li class="carousel-item">
-                                <h5>MongoDB</h5>
-                                <img src="img/png-transparent-mongodb-original-wordmark-logo-icon-thumbnail Background Removed.png" alt="MongoDB Logo">
-                            </li>
-                            <li class="carousel-item">
-                                <h5>React</h5>
-                                <img src="img/React Background Removed.png" alt="React Logo">
-                            </li>
-                            <li class="carousel-item">
-                                <h5>NodeJS</h5>
-                                <img src="img/71302-express.js-chrome-javascript-system-node Background Removed.js-v8-runtime_1687631713.png" alt="NodeJS Logo">
-                            </li>
-                            <li class="carousel-item">
-                                <h5>MySQL</h5>
-                                <img src="img/MySQL.jpg" alt="NodeJS Logo">
-                            </li>
-                        </ul>
-                    </div>
-                    <button class="carousel-btn next-btn">&gt;</button>
+        </section>
+
+
+
+        <section id="Skills" aria-labelledby="skills-heading">
+            
+            <div class="s-container">
+                <h1>Skills</h1>
+                <div class="skills-specifications">
+                    <ul>
+                        <li><button data-filter="all">All</button></li>
+                        <li><button data-filter="languages">Languages</button></li>
+                        <li><button data-filter="frontend">Frontend</button></li>
+                        <li><button data-filter="backend">Backend</button></li>
+                        <li><button data-filter="databases">Databases</button></li>
+                        <li><button data-filter="frameworks">FrameWorks</button></li>
+                        <li><button data-filter="tools">Tools</button></li>
+                    </ul>
+                </div>
+                
+
+                <div class="skills-container">
+                        <!-- Frontend -->
+                        <div class="skill" data-category = "frontend" > HTML 
+                            <img src="/Briefcase/img/skills/html.png" alt=""></div>
+                        <div class="skill" data-category = "frontend" > CSS  
+                            <img src="/Briefcase/img/skills/css.png" alt=""></div>
+                        <div class="skill" data-category = "frontend,backend,languages" > JavaScript 
+                            <img src="/Briefcase/img/skills/javascript.png" alt=""></div>
+                        <div class="skill" data-category = "frontend, frameworks" > React 
+                            <img src="/Briefcase/img/skills/react.png" alt=""></div>
+                        <div class="skill" data-category = "backend, frameworks" > Express 
+                            <img src="/Briefcase/img/skills/express.png" alt=""></div>    
+
+                        <!-- Backend -->
+                        <div class="skill" data-category = "backend" > NodeJS 
+                            <img src="/Briefcase/img/skills/nodejs.png" alt=""></div>
+                        <div class="skill" data-category = "backend,languages" > Java 
+                            <img src="/Briefcase/img/skills/java.png" alt=""></div>
+
+                        <!-- Databases -->
+                        <div class="skill" data-category = "databases" > MySQL 
+                            <img src="/Briefcase/img/skills/MySQL.jpg" alt=""></div>
+                        <div class="skill" data-category = "databases" > MongoDB 
+                            <img src="/Briefcase/img/skills/mongodb.png" alt=""></div>
+                        
+                        <!-- FrameWorks -->
+                        <div class="skill" data-category = "frameworks" > Apollo Server 
+                            <img src="/Briefcase/img/skills/apolloserver.png" alt=""></div>
+
+                        <!-- Tools -->
+                        <div class="skill" data-category = "tools" > Docker 
+                            <img src="/Briefcase/img/skills/docker.png" alt=""></div>
+                        <div class="skill" data-category = "tools" > GitHub 
+                            <img src="/Briefcase/img/skills/github.png" alt=""></div>
+
+                        <!-- Languages -->
+                        <div class="skill" data-category = "languages" > SQL 
+                            <img src="/Briefcase/img/skills/sql.png" alt=""></div>
                 </div>
             </div>
-        </section>           
+
+        </section>
+
         
-    
-        <section id="Projects">
+
+        <section id="Projects" aria-labelledby="projects-heading">
             <div>
                 <h2>Projects</h2>
         
@@ -112,7 +143,7 @@
                     <div class="project-card">
                         <a href="https://freelancer-proyect-curse.netlify.app" target="_blank">
                             <h3>Project 1</h3>
-                            <img src="/img/ServiciosStore.png" alt="Project 2 Screenshot">
+                            <img src="/Briefcase/img/ServiciosStore.png" alt="Freelacer Developer Website" loading="lazy">
                             <p>A basic HTML and CSS website designed for a freelance developer.</p>
                         </a>
                     </div>
@@ -120,7 +151,7 @@
                     <div class="project-card">
                         <a href="https://coffe-store-tips-and-courses.netlify.app" target="_blank">
                             <h3>Project 2</h3>
-                            <img src="/img/blog_cafe.png" alt="Project 2 Screenshot">
+                            <img src="/Briefcase/img/blog_cafe.png" alt="Coffe store website" loading="lazy">
                             <p>A responsive blog dedicated to coffee enthusiasts. Explore courses and workshops to learn about coffee techniques, origins, and culture.</p>
                         </a>
                     </div>
@@ -128,7 +159,7 @@
                     <div class="project-card">
                         <a href="https://shirts-store-responsive.netlify.app" target="_blank">
                             <h3>Project 3</h3>
-                            <img src="/img/frontedStore.png" alt="Project 2 Screenshot">
+                            <img src="/Briefcase/img/frontedStore.png" alt="Shirts store website" loading="lazy">
                             <p>A responsive Ecommerce website featuring products like t-shirts related to popular technologies, with a clean and attractive design.</p>
                         </a>
                     </div>
@@ -139,7 +170,7 @@
         
         
     
-        <section id="Contact">
+        <section id="Contact" aria-labelledby="contact-heading">
             <div class="contact-container">
                 <h2>Contact Me</h2>
                 <form id="contactForm" action="https://formspree.io/f/xnnqkbnr" method="POST">
@@ -164,10 +195,7 @@
         <div class="footer-container">
             <div class="footer-section">
                 <h3>About</h3>
-                <p>Hello! I'm an aspiring web developer currently building my skills through various projects. 
-                    This portfolio showcases some of the work I've done so far. 
-                    I’ve also developed APIs for several projects, but I encountered challenges when deploying them due to the use of two separate servers—one for the frontend and another for the backend, which manages all the data.
-                </p>
+                <p>Hello! I'm an aspiring web developer currently building my skills through various projects and im excited </p>
             </div>
             <div class="footer-section">
                 <h3>Contact</h3>
@@ -180,7 +208,7 @@
                 <h3>Follow Me</h3>
                 <ul class="social-links">
                     <li><a href="https://www.linkedin.com/in/jorge-eduardo-gonzalez-cortes-7722b92a6/" target="_blank">LinkedIn</a></li>
-                    <li><a href="https://github.com/MotoMotoRotoBombon/ProyectoMultiPlataformas" target="_blank">GitHub</a></li>
+                    <li><a href="https://github.com/MotoMotoRotoBombon" target="_blank">GitHub</a></li>
                 </ul>
             </div>
         </div>
@@ -189,14 +217,18 @@
         </div>
     </footer>
 
-    
-    <script src="carousel.js"></script>
+    <script src="/Briefcase/js/previewCV.js"></script>
+    <script src="/Briefcase/js/script.js"></script>
+    <script src="/Briefcase/js/fadeIn.js"></script>
     <script>
-        document.getElementById('contactForm').addEventListener('submit', function(event) {
-            // Usar un temporizador para limpiar el formulario después de enviar
-            setTimeout(() => {
-                this.reset();
-            }, 50); // Esperar un momento para que el formulario se envíe
+        document.getElemen;tById('contactForm').addEventListener('submit', async (e) => {
+        e.preventDefault()
+        const response = await fetch(e.target.action, {
+            method: 'POST',
+            body: new FormData(e.target)
+        });
+        if (response.ok) alert('Message sent!');
+        else alert('Error. Try again.');
         });
     </script>
     
