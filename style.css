@@ -107,13 +107,13 @@ nav #Navbar-container a:hover {
 
 section{
     position: relative;
-    height: 100vh;
     width: 100%;
     padding: 20px;
     display: flex;
     justify-content: center;
     align-items: center;
     text-align: center;
+    min-height: 100vh;
 }
 
 /************************** LOGO STYLE **************************/
@@ -191,6 +191,7 @@ section{
     padding: 4rem 2rem;
     max-width: 1000px;
     margin: auto;
+
 }
 
 .aboutme-info{
@@ -211,6 +212,22 @@ section{
     object-fit: cover;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
     animation: fadeIn 1s ease-in-out;
+}
+
+@media (max-width: 768px){
+    .aboutMe-container{
+        flex-direction: column;
+        text-align: center;
+    }
+    .aboutme-img{
+        width: 150px;
+        height: 150px;
+        margin-bottom: 1rem;
+    }
+    .aboutme-info{
+        width: 90%;
+        padding: 1.5rem;
+    }
 }
 
 @keyframes fadeIn {
@@ -240,6 +257,7 @@ section{
     margin: 0 auto;
     padding: 2rem;
     text-align: center;
+    color: white
 }
 
 .skills-specifications{
@@ -247,6 +265,7 @@ section{
     justify-content: center;
     width: 100%;
     padding: 1rem 0;
+    flex-wrap: wrap;
 }
 
 .skills-specifications ul{
@@ -260,6 +279,7 @@ section{
     overflow: hidden;
     width: 100%;
     max-width: 90%;
+    flex-wrap: wrap;
 } 
 
 .skills-specifications li{
@@ -278,26 +298,7 @@ section{
     width: 100%;
     box-sizing: border-box;
     text-align: center;
-}
-
-@media (max-width: 768px) {
-    .skills-specifications ul {
-        flex-wrap: wrap;
-        gap: 0.5rem;
-    }
-    .skills-specifications button{
-        padding: 0.5rem;
-    }
-}
-
-@media (max-width: 480px) {
-    .skills-specifications ul {
-        flex-direction: column;
-        gap: 0.25rem;
-    }
-    .skills-specifications button{
-        padding: 0.8rem;
-    }
+    border: 1px solid white;
 }
 
 .skills-specifications button:hover{
@@ -317,21 +318,23 @@ section{
 }
 
 .skill{
-    padding: 2rem;
-    background-color:#2C0735;
+    padding: 1.5rem;
+    background-color:rgba(255, 255, 255, 0.1);
+    /*background-color: rgba(83, 19, 92, 0.1);*/
     border-radius: 0.5rem;
-    font-size: 1.6rem;
+    font-size: 1.4rem;
     text-align: center;
     display: flex;
     flex-direction: column;
     align-items: center;
     justify-content: center;
     max-height: 150px;
+    border: 1px solid rgba(255, 255, 255, 0.3);
 }
 
 .skill img{
-    width: 150px;
-    height: 80px;
+    width: 120px;
+    height: 70px;
     object-fit: contain;
     margin-top: 0.5rem;
 }
@@ -339,18 +342,13 @@ section{
 .skill:hover{
     transform: scale(1.05);
     cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.2);
 }
 
-@media (max-width: 1024px) {
-    .skills-container {
-        grid-template-columns: repeat(4, 1fr); 
-        gap: 2rem;
-    }
-}
 
 @media (max-width: 768px) {
     .skills-container {
-        gap: 2rem;
+        gap: 1.5rem;
         grid-template-columns: repeat(3, 1fr); 
     }
 }
