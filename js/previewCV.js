@@ -7,7 +7,7 @@ document.addEventListener("DOMContentLoaded" , () => {
 
     viewCV.addEventListener("click", (e) => {
         e.preventDefault();
-        cvFrame.src = "/Briefcase/cv/Jorge_CV.pdf";
+        cvFrame.src = "/cv/Jorge_CV.pdf";
         cvModal.style.display = "flex"
     });
 
