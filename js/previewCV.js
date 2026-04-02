@@ -17,7 +17,7 @@ document.addEventListener("DOMContentLoaded" , () => {
     });
 
     window.addEventListener("click", (e) => {
-        if(e.target === cvFrame){
+        if(e.target === cvModal){
             cvModal.style.display = "none";
             cvFrame.src = "";
         }
