@@ -2,241 +2,191 @@
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="Portfolio of Jorge Eduardo, junior web developer.">
-    <meta name="keywords" content="web developer, portfolio, projects, contact, home">
-    <meta name="author" content="Jorge Eduardo Gonzalez Gonzalez Cortes">
-    <link rel="stylesheet" href="/normalize.css">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
-    <link href="https://fonts.googleapis.com/css2?family=Open+Sans&family=PT+Sans:wght@400;700&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-
-    <title>Mi portafolio</title>
+    <meta name="description" content="Jorge Eduardo - Backend Developer. TypeScript, Node.js, AWS Serverless, RESTful APIs, and scalable cloud systems.">
+    <title>Jorge Eduardo | Backend Developer</title>
+    <link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>⚡</text></svg>">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/devicons/devicon@latest/devicon.min.css">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-    <header>
-        <nav>
-            <div id="Navbar-container">
-                <ul>
-                    <li><a href="#Home">Home</a></li>
-                    <li><a href="#AboutMe">About Me</a></li>
-                    <li><a href="#Skills">Skills</a></li>
-                    <li><a href="#Projects">Proyects</a></li>
-                    <li><a href="#Contact">Contact</a></li>
-                </ul>
+
+    <nav>
+        <div class="nav-inner">
+            <a href="#hero" class="nav-logo">JE.</a>
+            <button class="hamburger" aria-label="Toggle menu" id="menu-toggle">&#9776;</button>
+            <div class="nav-links" id="nav-links">
+                <a href="#hero">Home</a>
+                <a href="#about">About</a>
+                <a href="#skills">Skills</a>
+                <a href="#experience">Experience</a>
+                <a href="#contact">Contact</a>
             </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
 
-    <main>
-        <section id="Home" aria-labelledby="home-heading">
-            <div>
-                <div id="data-container">  
-                    <img class="logo" src="/img/Jorge.jpeg" alt=""> 
-                    <h1>I AM <strong class="name">JORGE</strong> EDUARDO</h1>
-                    <p>I'm a web developer junior (JavaScript | Java | HTML | CSS | React | Express | MongoDB | Mysql | NodeJS)</p>
-                    <p>I believe in dreaming big, but also in bravely walking the path that those dreams demand.</p>  
-                    <!-- Botton to download CV -->
-                    <a class="cv-button" href="/cv/Jorge_CV.pdf" download>Download CV</a>
-                    <!-- Preview CV-->
-                    <a class="cv-preview cv-button" id="cv-view" href="#">View CV</a>
+    <section id="hero">
+        <div class="hero-content">
+            <img class="avatar" src="img/Jorge.jpeg" alt="Jorge Eduardo">
+            <h1 class="hero-name">I'm <span class="highlight">Jorge</span> Eduardo</h1>
+            <p class="hero-title">Backend Developer</p>
+            <p class="hero-tagline">Building scalable, cloud-based systems with Node.js, TypeScript, and AWS serverless architecture. Focused on performance, reliability, and clean code.</p>
+            <div class="btn-group">
+                <a href="cv/Jorge_CV.pdf" download class="btn btn-primary">Download CV</a>
+                <a href="#contact" class="btn btn-outline">Get in Touch</a>
+            </div>
+        </div>
+    </section>
+
+    <section id="about">
+        <div class="container">
+            <h2 class="section-title">About Me</h2>
+            <p class="section-subtitle">A brief introduction</p>
+            <div class="about-grid reveal">
+                <img class="about-img" src="img/Jorge3.jpeg" alt="Jorge Eduardo">
+                <div class="about-text">
+                    <p>I'm a <span class="hl">Backend Developer</span> specialized in building scalable, cloud-based systems using <span class="hl">TypeScript</span>, <span class="hl">Node.js</span>, and <span class="hl">AWS serverless</span> architecture.</p>
+                    <p>I design and maintain <span class="hl">RESTful APIs</span>, implement event-driven workflows with Amazon SQS, and configure infrastructure as code using <span class="hl">Serverless Framework</span>. I also have full-stack experience with <span class="hl">React Native</span> and <span class="hl">Express</span>.</p>
+                    <p>Bachelor's in Computer Systems Engineering from <span class="hl">Instituto Tecnológico de Tepic</span>. Always eager to solve complex problems and keep growing as a developer.</p>
                 </div>
+            </div>
+        </div>
+    </section>
 
-                <div id="cv-modal" class="modal">
-                    <div class="modal-content">
-                        <span class="close">&times;</span>
-                        <iframe id="cv-frame" src="" width="100%" height="500px"></iframe>
+    <section id="skills">
+        <div class="container">
+            <h2 class="section-title">Skills</h2>
+            <p class="section-subtitle">Technologies I work with</p>
+            <div class="filter-bar">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="languages">Languages</button>
+                <button class="filter-btn" data-filter="frontend">Frontend</button>
+                <button class="filter-btn" data-filter="backend">Backend</button>
+                <button class="filter-btn" data-filter="databases">Databases</button>
+                <button class="filter-btn" data-filter="tools">Tools & Infra</button>
+            </div>
+            <div class="skills-grid reveal">
+                <div class="skill-card" data-cat="languages backend"><i class="devicon-typescript-plain colored"></i><span>TypeScript</span></div>
+                <div class="skill-card" data-cat="languages frontend backend"><i class="devicon-javascript-plain colored"></i><span>JavaScript</span></div>
+                <div class="skill-card" data-cat="frontend"><i class="devicon-html5-plain colored"></i><span>HTML5</span></div>
+                <div class="skill-card" data-cat="frontend"><i class="devicon-css3-plain colored"></i><span>CSS3</span></div>
+                <div class="skill-card" data-cat="frontend"><i class="devicon-react-original colored"></i><span>React</span></div>
+                <div class="skill-card" data-cat="frontend"><i class="devicon-react-original"></i><span>React Native</span></div>
+                <div class="skill-card" data-cat="backend"><i class="devicon-nodejs-plain colored"></i><span>Node.js</span></div>
+                <div class="skill-card" data-cat="backend"><i class="devicon-express-original"></i><span>Express</span></div>
+                <div class="skill-card" data-cat="databases"><i class="devicon-mysql-plain colored"></i><span>MySQL</span></div>
+                <div class="skill-card" data-cat="databases"><i class="devicon-mongodb-plain colored"></i><span>MongoDB</span></div>
+                <div class="skill-card" data-cat="tools"><i class="devicon-amazonwebservices-plain-wordmark colored"></i><span>AWS</span></div>
+                <div class="skill-card" data-cat="tools backend"><i class="devicon-serverless-plain"></i><span>Serverless</span></div>
+                <div class="skill-card" data-cat="tools"><i class="devicon-docker-plain colored"></i><span>Docker</span></div>
+                <div class="skill-card" data-cat="tools"><i class="devicon-git-plain colored"></i><span>Git</span></div>
+            </div>
+        </div>
+    </section>
+
+    <section id="experience">
+        <div class="container">
+            <h2 class="section-title">Experience</h2>
+            <p class="section-subtitle">Where I've worked</p>
+            <div class="reveal">
+
+                <div class="exp-card">
+                    <div class="exp-header">
+                        <div>
+                            <h3>Backend Developer</h3>
+                            <p class="exp-company">Atom</p>
+                        </div>
+                        <span class="exp-date">Aug 2025 &ndash; Present</span>
+                    </div>
+                    <p class="exp-desc">Developing and maintaining backend services with TypeScript and Node.js within a serverless architecture on AWS. Designing scalable RESTful APIs, event-driven SQS workflows, and infrastructure as code with Serverless Framework.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">TypeScript</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Serverless</span>
+                        <span class="tech-tag">AWS Lambda</span>
+                        <span class="tech-tag">API Gateway</span>
+                        <span class="tech-tag">Amazon SQS</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">Git</span>
                     </div>
                 </div>
-            </div>
-        </section>
 
-        <section id="AboutMe" aria-labelledby="aboutMe-heading">
-            <div class="aboutMe-container">
-                <img class="aboutme-img" src="/img/Jorge3.jpeg" alt=""> 
-                <div class="aboutme-info">
-                    <h1>About me</h1>          
-                    <p>Hi there! I'm a <span class="highlight"> Web Developer</span> student with a keen interest in backend and frontend dev</p>
-                    <p>Throughout my experience i have developed working web applications, created <span class="highlight">RESTful APIs</span>, used <span class="highlight">MongoDB</span> and <span class="highlight">MySQL</span> wich are where i've worked the most</p>
-                    <p>I like to code in JavaScript, I also had experience in <span class="highlight"> Java, NodeJS, Reac, Express</span> and agil methodologies</p>
-                    <p>I am currently finishing my last semester of Computer System Engineering at <span class="highlight"> Instituto Tecnológico de Tepic</span>. I'm excited to apply my knowledge in a professional environment and continue learning about the world of progamming every day</p>
-                </div>
-            </div>
-        </section>
-
-
-
-        <section id="Skills" aria-labelledby="skills-heading">           
-            <div class="s-container">
-                <h1>Skills</h1>
-                <div class="skills-specifications">
-                    <ul>
-                        <li><button data-filter="all">All</button></li>
-                        <li><button data-filter="languages">Languages</button></li>
-                        <li><button data-filter="frontend">Frontend</button></li>
-                        <li><button data-filter="backend">Backend</button></li>
-                        <li><button data-filter="databases">Databases</button></li>
-                        <li><button data-filter="frameworks">FrameWorks</button></li>
-                        <li><button data-filter="tools">Tools</button></li>
-                    </ul>
-                </div>
-                
-
-                <div class="skills-container">
-                        <!-- Frontend -->
-                        <div class="skill" data-category = "frontend" > HTML 
-                            <img src="/img/skills/html.png" alt=""></div>
-                        <div class="skill" data-category = "frontend" > CSS  
-                            <img src="/img/skills/css.png" alt=""></div>
-                        <div class="skill" data-category = "frontend,backend,languages" > JavaScript 
-                            <img src="/img/skills/javascript.png" alt=""></div>
-                        <div class="skill" data-category = "frontend, frameworks" > React 
-                            <img src="/img/skills/react.png" alt=""></div>
-                        <div class="skill" data-category = "backend, frameworks" > Express 
-                            <img src="/img/skills/express.png" alt=""></div>    
-
-                        <!-- Backend -->
-                        <div class="skill" data-category = "backend" > NodeJS 
-                            <img src="/img/skills/nodejs.png" alt=""></div>
-                        <div class="skill" data-category = "backend,languages" > Java 
-                            <img src="/img/skills/java.png" alt=""></div>
-
-                        <!-- Databases -->
-                        <div class="skill" data-category = "databases" > MySQL 
-                            <img src="/img/skills/MySQL.jpg" alt=""></div>
-                        <div class="skill" data-category = "databases" > MongoDB 
-                            <img src="/img/skills/mongodb.png" alt=""></div>
-                        
-                        <!-- FrameWorks -->
-                        <div class="skill" data-category = "frameworks" > Apollo Server 
-                            <img src="/img/skills/apolloserver.png" alt=""></div>
-
-                        <!-- Tools -->
-                        <div class="skill" data-category = "tools" > Docker 
-                            <img src="/img/skills/docker.png" alt=""></div>
-                        <div class="skill" data-category = "tools" > GitHub 
-                            <img src="/img/skills/github.png" alt=""></div>
-
-                        <!-- Languages -->
-                        <div class="skill" data-category = "languages" > SQL 
-                            <img src="/img/skills/sql.png" alt=""></div>
-                </div>
-            </div>
-        </section>
-
-        
-
-        <section id="Projects" aria-labelledby="projects-heading">
-            <div>
-                <h2>Projects</h2>
-        
-                <div class="warning-icon">
-                    <i class="fas fa-exclamation-triangle"></i>
-                    <span class="tooltip-text">Those projects were developed in courses.</span>
-                </div>
-        
-                <div class="projects-container">
-                    <!-- Proyecto 1 -->
-                    <div class="project-card">
-                        <a href="https://freelancer-proyect-curse.netlify.app" target="_blank">
-                            <h3>Freelancer website</h3>
-                            <img src="/img/ServiciosStore.png" alt="Freelacer Developer Website" loading="lazy">
-                            <p>A basic HTML and CSS website designed for a freelance developer.</p>
-                        </a>
+                <div class="exp-card">
+                    <div class="exp-header">
+                        <div>
+                            <h3>Full-Stack Developer</h3>
+                            <p class="exp-company">Mobile Fitness Application</p>
+                        </div>
+                        <span class="exp-date">Apr &ndash; Sep 2025</span>
                     </div>
-                    <!-- Proyecto 2 -->
-                    <div class="project-card">
-                        <a href="https://coffe-store-tips-and-courses.netlify.app" target="_blank">
-                            <h3>Coffee store website</h3>
-                            <img src="/img/blog_cafe.png" alt="Coffe store website" loading="lazy">
-                            <p>A responsive blog dedicated to coffee enthusiasts. Explore courses and workshops to learn about coffee techniques, origins, and culture.</p>
-                        </a>
+                    <p class="exp-desc">Built a mobile fitness app with AI-generated workout routines and progress tracking. Created a RESTful API with clean layered architecture and a dynamic React Native frontend with animations and persistent storage.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">React Native</span>
+                        <span class="tech-tag">Node.js</span>
+                        <span class="tech-tag">Express</span>
+                        <span class="tech-tag">MySQL</span>
+                        <span class="tech-tag">Expo</span>
+                        <span class="tech-tag">Axios</span>
                     </div>
-                    <!-- Proyecto 3 -->
-                    <div class="project-card">
-                        <a href="https://shirts-store-responsive.netlify.app" target="_blank">
-                            <h3>Shirts store website</h3>
-                            <img src="/img/frontedStore.png" alt="Shirts store website" loading="lazy">
-                            <p>A responsive Ecommerce website featuring products like t-shirts related to popular technologies, with a clean and attractive design.</p>
-                        </a>
-                    </div>
-                    <!-- Proyecto 4 --> 
-                    <div class="project-card">
-                        <a href="https://jimmysgrillmenu.netlify.app/" target="_blank">
-                            <h3>Gimmy's Grill Menu</h3>
-                            <img src="/img/IMG_4826.jpg" alt="Gimmy's Grill Menu Website" loading="lazy">
-                            <p>A responsive restaurant where i worked menu website with a clean design, showcasing dishes and their details for an enhanced customer experience on all devices.</p>
-                        </a>
-                    </div>  
                 </div>
+
+                <div class="exp-card">
+                    <div class="exp-header">
+                        <div>
+                            <h3>Product & UI/UX Designer</h3>
+                            <p class="exp-company">Tzuku</p>
+                        </div>
+                        <span class="exp-date">2025</span>
+                    </div>
+                    <p class="exp-desc">Led end-to-end design of a mobile app for pet monitoring and activity tracking. Created user flows, high-fidelity UI designs, interactive prototypes, and defined visual guidelines for future scalability.</p>
+                    <div class="tech-tags">
+                        <span class="tech-tag">UI/UX Design</span>
+                        <span class="tech-tag">Prototyping</span>
+                        <span class="tech-tag">User Flows</span>
+                        <span class="tech-tag">Visual Systems</span>
+                    </div>
+                </div>
+
             </div>
-        </section>
-        
-        
-        
-    
-        <section id="Contact" aria-labelledby="contact-heading">
-            <div class="contact-container">
-                <h2>Contact Me</h2>
-                <form id="contactForm" action="https://formspree.io/f/xnnqkbnr" method="POST">
-                    <label>
-                        Your email:
-                        <input type="email" name="email" placeholder="Enter your email" required>
+        </div>
+    </section>
+
+    <section id="contact">
+        <div class="container">
+            <h2 class="section-title">Get in Touch</h2>
+            <p class="section-subtitle">Let's work together</p>
+            <div class="contact-grid reveal">
+                <form class="contact-form" id="contactForm" action="https://formspree.io/f/xnnqkbnr" method="POST">
+                    <label>Your email
+                        <input type="email" name="email" placeholder="you@example.com" required>
                     </label>
-                    <label>
-                        Your message:
-                        <textarea name="message" placeholder="Write your message here..." required></textarea>
+                    <label>Your message
+                        <textarea name="message" placeholder="Tell me about your project..." required></textarea>
                     </label>
-                    <button type="submit">Send</button>
+                    <button type="submit" class="btn btn-primary" style="align-self:flex-start">Send Message</button>
                 </form>
+                <div class="contact-info">
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">&#9993;</div>
+                        <span>joorge.gonzalez.dev@gmail.com</span>
+                    </div>
+                    <div class="contact-info-item">
+                        <div class="contact-info-icon">&#9742;</div>
+                        <span>+52 327 104 9974</span>
+                    </div>
+                    <div class="social-links">
+                        <a href="https://www.linkedin.com/in/joedgonzalezco/" target="_blank" class="social-link" aria-label="LinkedIn"><i class="devicon-linkedin-plain"></i></a>
+                        <a href="https://github.com/JorgeGitHub" target="_blank" class="social-link" aria-label="GitHub"><i class="devicon-github-original"></i></a>
+                    </div>
+                </div>
             </div>
-        </section>
-        
-        
-        
-    </main>
+        </div>
+    </section>
 
     <footer>
-        <div class="footer-container">
-            <div class="footer-section">
-                <h3>About</h3>
-                <p>Hello! I'm an web developer currently building my skills through various projects and im excited shared it with you, there is many things that i have to improve and thats the most interesting part of coding.</p>
-            </div>
-            <div class="footer-section">
-                <h3>Contact</h3>
-                <ul>
-                    <li><a>joedgonzalezco@ittepic.edu.mx</a></li>
-                    <li><a>+523271049974</a></li>
-                </ul>
-            </div>
-            <div class="footer-section">
-                <h3>Follow Me</h3>
-                <ul class="social-links">
-                    <li><a href="https://www.linkedin.com/in/jorge-eduardo-gonzalez-cortes-7722b92a6/" target="_blank">LinkedIn</a></li>
-                    <li><a href="https://github.com/MotoMotoRotoBombon" target="_blank">GitHub</a></li>
-                </ul>
-            </div>
-        </div>
-        <div class="footer-bottom">
-            <p>&copy; 2024 Jorge Eduardo Gonzalez Cortes. All rights reserved.</p>
-        </div>
+        <p>&copy; 2026 Jorge Eduardo Gonzalez Cortes. All rights reserved.</p>
     </footer>
 
-    <script src="/js/previewCV.js"></script>
-    <script src="/js/script.js"></script>
-    <script src="/js/fadeIn.js"></script>
-    <script>
-        document.getElementById('contactForm').addEventListener('submit', async (e) => {
-        e.preventDefault()
-        const response = await fetch(e.target.action, {
-            method: 'POST',
-            body: new FormData(e.target)
-        });
-        if (response.ok) alert('Message sent!');
-        else alert('Error. Try again.');
-        });
-    </script>
-    
+    <script src="js/main.js"></script>
 </body>
 </html>
