@@ -29,24 +29,42 @@ document.querySelectorAll('.reveal').forEach(el => observer.observe(el));
 
 document.getElementById('contactForm').addEventListener('submit', async e => {
     e.preventDefault();
-    const btn = e.target.querySelector('button[type="submit"]');
+    const form = e.currentTarget;
+    const btn = form.querySelector('button[type="submit"]');
+    const status = document.getElementById('formStatus');
+    const originalText = btn.textContent;
+
+    status.textContent = '';
+    status.className = 'form-status';
     btn.textContent = 'Sending...';
     btn.disabled = true;
+
     try {
-        const response = await fetch(e.target.action, {
+        const response = await fetch(form.action, {
             method: 'POST',
-            body: new FormData(e.target)
+            body: new FormData(form),
+            headers: {
+                Accept: 'application/json'
+            }
         });
+
+        const result = await response.json().catch(() => ({}));
+
         if (response.ok) {
-            alert('Message sent successfully!');
-            e.target.reset();
+            status.textContent = 'Message sent successfully.';
+            status.classList.add('success');
+            form.reset();
         } else {
-            alert('Error sending message. Please try again.');
+            const error = result.errors?.[0]?.message || 'Error sending message. Please try again.';
+            status.textContent = error;
+            status.classList.add('error');
         }
     } catch {
-        alert('Network error. Please try again.');
+        status.textContent = 'Network error. Please try again.';
+        status.classList.add('error');
     }
-    btn.textContent = 'Send Message';
+
+    btn.textContent = originalText;
     btn.disabled = false;
 });
 

@@ -557,6 +557,21 @@ section {
     min-height: 120px;
 }
 
+.form-status {
+    min-height: 1.4rem;
+    font-size: 0.82rem;
+    line-height: 1.5;
+    color: var(--text-2);
+}
+
+.form-status.success {
+    color: #34d399;
+}
+
+.form-status.error {
+    color: #f87171;
+}
+
 .contact-info {
     display: flex;
     flex-direction: column;
